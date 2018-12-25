@@ -5,18 +5,21 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
-import { AppComponent } from './app.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
 // routing
 import {routing} from './app-routing.module';
 //  Components
-import { LandingComponent } from './landing/landing.component';
+import { AppComponent } from './app.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { LandingComponent } from './landing/landing.component';
     BrowserAnimationsModule,
     MatBadgeModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatToolbarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
