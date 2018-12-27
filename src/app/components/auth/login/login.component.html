@@ -4,7 +4,7 @@
             <img src="assets/logos/drago.svg">
         </div>
 		<div class="auth_left_wrapper_title" >
-            Welcome to the FUSE!
+            Welcome to the DRAGO!
         </div>
 		<div class="auth_left_wrapper_description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat,
@@ -20,30 +20,28 @@
 			<form name="loginForm" [formGroup]="loginForm" novalidate>
 				<mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input matInput formControlName="email">
+                    <input matInput formControlName="email" autocomplete="off">
                     <mat-icon matSuffix class="secondary-text">mail</mat-icon>
                     <mat-error *ngIf="loginForm.get('email').hasError('required')">
                         Email is required
                     </mat-error>
-                    <mat-error
-                        *ngIf="!loginForm.get('email').hasError('required') &&
-                                loginForm.get('email').hasError('email')">
+                    <mat-error *ngIf="!loginForm.get('email').hasError('required') && loginForm.get('email').hasError('email')">
                         Please enter a valid email address
                     </mat-error>
                 </mat-form-field>
 				<mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput type="password" formControlName="password">
+                    <input matInput type="password" formControlName="password" autocomplete="off">
                     <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
                     <mat-error>
                         Password is required
                     </mat-error>
                 </mat-form-field>
-				<div class="remember_forgot_password remember_forgot_password_layout">
+				<div class="form_bottom_block form_bottom_block_layout">
                     <mat-checkbox class="remember_me" aria-label="Remember Me">
                         Remember Me
                     </mat-checkbox>
-					<a class="forgot_password">
+					<a class="forgot_password" [routerLink]="['/forget-password']">
                         Forgot Password?
                     </a>
                 </div>
@@ -53,7 +51,7 @@
 			</form>
 			<div class="auth_bottom_block auth_bottom_block_layout">
                 <span class="text">Don't have an account?</span>
-                <a class="link">Create an account</a>
+                <a class="link" [routerLink]="['/register']">Create an account</a>
             </div>
         </div>
     </div>

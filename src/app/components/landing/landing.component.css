@@ -14015,6 +14015,15 @@ label {
     background-size: cover;
     background-position: top left;
 }
+.faq_illustration_img{
+    position: absolute;
+    right: 30px;
+    bottom: 85px;
+    width: 37%;
+    top: 80px;
+    background-size: cover;
+    background-position: top left
+}
 .cta--1 {
     position: relative;
     padding-top: 230px;
