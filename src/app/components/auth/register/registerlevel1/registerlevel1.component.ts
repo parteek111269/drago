@@ -18,8 +18,9 @@ export class Registerlevel1Component implements OnInit {
 		this.registerForm = this.fb.group({
             name: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
-            password: ['', Validators.required],
-            passwordConfirm: ['', [Validators.required, confirmPasswordValidator]]
+            password: ['', [Validators.required, Validators.minLength(6)]],
+            passwordConfirm: ['', [Validators.required, confirmPasswordValidator]],
+            terms: ['', Validators.required]
         });
         // Update the validity of the 'passwordConfirm' field
         // when the 'password' field changes
