@@ -1,10 +1,27 @@
 github cred
+-------------------------------
 parteek111269
 thisismygithub@123
 
-themeforest acc
+gitlab
+-------------------------------
+parteek111269
+uimatic@123
+
+themeforest
+-------------------------------
 sharmaparteek201@gmail.com
 parteek111269
 thisismythemeforest@123
 
+trello
+-------------------------------
+sharmaparteek201@gmail.com
+thisismytrello@123
+
 git config -l to check the info
+
+Work flow:
+1. Registeration: email password and company name.
+2. Verification: A 4 or 6 digit number will be pushed to user's email.
+

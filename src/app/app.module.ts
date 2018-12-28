@@ -9,7 +9,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
-
+import {MatStepperModule} from '@angular/material/stepper';
 // routing
 import {routing} from './app-routing.module';
 //  Components
@@ -18,6 +18,8 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
+import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
+import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgot
     LandingComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    ResetpasswordComponent,
+    NumberonlyDirective,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,7 @@ import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgot
     MatCardModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    MatGridListModule,
+    MatGridListModule, MatStepperModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule
   ],
   providers: [],

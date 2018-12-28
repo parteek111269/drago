@@ -1,0 +1,14 @@
+.otp_box .otp{
+	color: darkgray;
+  	border-style: none;
+  	width: 60px;
+  	height: 60px;
+  	font-size: 50px;
+}
+.otp_box td {
+  border: 2px solid darkgray
+}
+
+.otp_box table {
+  border-collapse: collapse;
+}
