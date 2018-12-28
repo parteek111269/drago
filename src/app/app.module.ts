@@ -20,6 +20,8 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
+import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
+import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { NumberonlyDirective } from './directives/numberonly/numberonly.directiv
     ForgotpasswordComponent,
     ResetpasswordComponent,
     NumberonlyDirective,
+    Registerlevel1Component,
+    Registerlevel2Component,
   ],
   imports: [
     BrowserModule,

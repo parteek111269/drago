@@ -16,79 +16,14 @@
 			<div class="logo">
                 <img src="assets/logos/drago.svg">
             </div>
-			<div class="auth_form_title">Register</div>
             <mat-horizontal-stepper labelPosition="bottom" #stepper>
                 <mat-step [stepControl]="registerForm">
-        			<form name="registerForm" [formGroup]="registerForm" novalidate>
-        				<mat-form-field appearance="outline">
-                            <mat-label>Company name</mat-label>
-                            <input matInput formControlName="name" autocomplete="off">
-                            <mat-error>
-                                Company name is required
-                            </mat-error>
-                        </mat-form-field>
-        				<mat-form-field appearance="outline">
-                            <mat-label>Email</mat-label>
-                            <input matInput formControlName="email" autocomplete="off">
-                            <mat-error *ngIf="registerForm.get('email').hasError('required')">
-                                Email is required
-                            </mat-error>
-                            <mat-error *ngIf="registerForm.get('email').hasError('email')">
-                                Please enter a valid email address
-                            </mat-error>
-                        </mat-form-field>
-        				<mat-form-field appearance="outline">
-                            <mat-label>Password</mat-label>
-                            <input matInput type="password" formControlName="password" autocomplete="off">
-                            <mat-error>
-                                Password is required
-                            </mat-error>
-                        </mat-form-field>
-        				<mat-form-field appearance="outline">
-                            <mat-label>Password (Confirm)</mat-label>
-                            <input matInput type="password" formControlName="passwordConfirm" autocomplete="off">
-                            <mat-error *ngIf="registerForm.get('passwordConfirm').hasError('required')">
-                                Password confirmation is required
-                            </mat-error>
-                            <mat-error *ngIf="!registerForm.get('passwordConfirm').hasError('required') && registerForm.get('passwordConfirm').hasError('passwordsNotMatching')">
-                                Passwords must match
-                            </mat-error>
-                        </mat-form-field>
-        				<div class="form_bottom_block form_bottom_block_layout">
-                            <mat-checkbox name="terms" aria-label="Accept" required>
-                                <span>Accept <a href="#">terms and conditions</a></span>
-                            </mat-checkbox>
-                        </div>
-        				<button mat-flat-button matStepperNext color="accent" class="submit_button" aria-label="CREATE AN ACCOUNT" [disabled]="registerForm.invalid">
-                            CREATE AN ACCOUNT
-                        </button>
-                    </form>
+                    <div class="auth_form_title">Register</div>
+        			<app-registerlevel1></app-registerlevel1>
                 </mat-step>
                 <mat-step [stepControl]="confirmationForm">
-                    <form name="confirmationForm" [formGroup]="confirmationForm" novalidate>
-                        <div class="otp_box">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <input formControlName="otp1" appNumberonly="true" type="tel" id="otp1" #otp1 class="otp" maxlength="1" size="1" (keyup)="next($event, otp2)" />
-                                    </td>
-                                    <td>
-                                        <input formControlName="otp2" appNumberonly="true"  type="tel" id="otp2" #otp2 class="otp" maxlength="1" size="1" (keyup)="next($event, otp3)" />
-                                    </td>
-                                    <td>
-                                        <input formControlName="otp3" appNumberonly="true"  type="tel" id="otp3" #otp3 class="otp" maxlength="1" size="1" (keyup)="next($event, otp4)" />
-                                    </td>
-                                    <td>
-                                        <input formControlName="otp4" appNumberonly="true"  type="tel" id="otp4" #otp4 class="otp" maxlength="1" size="1" (keyup)="next($event, otp4)" />
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!-- <button mat-flat-button matStepperNext color="accent" class="submit_button" aria-label="Confirmation" [disabled]="confirmationForm.invalid">
-                            Go
-                        </button> -->
-                        <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
-                    </form>
+                    <div class="auth_form_title">Verify OTP</div>
+                    <app-registerlevel2></app-registerlevel2>
                 </mat-step>
             </mat-horizontal-stepper>
             <div class="auth_bottom_block auth_bottom_block_layout">
