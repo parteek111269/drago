@@ -1,12 +1,18 @@
 .otp_box .otp{
-	color: darkgray;
-  	border-style: none;
-  	width: 60px;
-  	height: 60px;
-  	font-size: 50px;
+	color: #000000db;
+	border-style: none;
+	width: 45px;
+  height: 45px;
+  font-size: 35px;
+  text-align: center;
+}
+.otp_box .otp_table{
+	border-spacing: 2px;
+  border-collapse: separate;
 }
 .otp_box td {
-  border: 2px solid darkgray
+  border: 1px solid #000000db;
+  border-radius: 4px;
 }
 
 .otp_box table {

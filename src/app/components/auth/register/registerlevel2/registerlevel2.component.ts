@@ -15,7 +15,9 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
             otp1: ['', Validators.required],
             otp2: ['', Validators.required],
             otp3: ['', Validators.required],
-            otp4: ['', Validators.required]
+            otp4: ['', Validators.required],
+            otp5: ['', Validators.required],
+            otp6: ['', Validators.required]
         });
   	}
 	ngOnInit():void {}
