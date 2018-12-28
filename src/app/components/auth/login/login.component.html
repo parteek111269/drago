@@ -30,7 +30,11 @@
                 </mat-form-field>
 				<mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput type="password" formControlName="password" autocomplete="off">
+                    <input matInput type={{passwordType}} formControlName="password" autocomplete="off">
+                    <mat-icon *ngIf="loginForm.get('password').value" matSuffix class="secondary-text cursor_layout" (click)="passwordVisibility()">
+                        <span *ngIf="passwordType === 'text'">remove_red_eye</span>
+                        <span *ngIf="passwordType === 'password'">vpn_key</span>
+                    </mat-icon>
                     <mat-error *ngIf="loginForm.get('password').hasError('required')">Password is required</mat-error>
                     <mat-error *ngIf="loginForm.get('password').hasError('minlength')">Minimum length 6</mat-error>
                 </mat-form-field>

@@ -12,6 +12,8 @@ export class Registerlevel1Component implements OnInit {
 	private registerForm: FormGroup;
 	private confirmationForm: FormGroup;
 	private unsubscribeAll: Subject<any>;
+	private passwordType: string = 'password';
+	private confirmPasswordType: string = 'password';
 	constructor(private fb: FormBuilder){
 		this.unsubscribeAll = new Subject();
 		// registeration form
@@ -34,6 +36,16 @@ export class Registerlevel1Component implements OnInit {
         this.unsubscribeAll.next();
         this.unsubscribeAll.complete();
 	}
+	private passwordVisibility(flag: string) {
+		switch(flag){
+			case 'password':
+				this.passwordType === 'password' ? this.passwordType = 'text' : this.passwordType = 'password';
+			break;
+			case 'confirm_password':
+				this.confirmPasswordType === 'password' ? this.confirmPasswordType = 'text' : this.confirmPasswordType = 'password';
+			break;	
+		}
+    }
 	private getOtp(){}
 }
 export const confirmPasswordValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
