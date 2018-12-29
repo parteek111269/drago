@@ -35,7 +35,7 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
     }
     private otpTimer(): void {
         this.isResendotpEnable = false;
-        this.timeleft = 30;
+        this.timeleft = 60;
         var downloadTimer = setInterval(() => { 
              this.timeleft--;
             if(this.timeleft <= 0){

@@ -22,8 +22,6 @@ import { ResetpasswordComponent } from './components/auth/resetpassword/resetpas
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
-// pipes
-import { FormattimePipe } from './pipes/formatpipe/formattime.pipe';
 
 
 @NgModule({
@@ -36,8 +34,7 @@ import { FormattimePipe } from './pipes/formatpipe/formattime.pipe';
     ResetpasswordComponent,
     NumberonlyDirective,
     Registerlevel1Component,
-    Registerlevel2Component,
-    FormattimePipe,
+    Registerlevel2Component
   ],
   imports: [
     BrowserModule,

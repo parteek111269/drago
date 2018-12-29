@@ -19,20 +19,20 @@
 	<mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input matInput type={{passwordType}} formControlName="password" autocomplete="off">
-        <mat-icon *ngIf="registerForm.get('password').value" matSuffix class="secondary-text cursor_layout" (click)="passwordVisibility('password')">
-            <span *ngIf="passwordType === 'text'">remove_red_eye</span>
-            <span *ngIf="passwordType === 'password'">vpn_key</span>
-        </mat-icon>
+        <span class="password_icon" *ngIf="registerForm.get('password').value" (click)="passwordVisibility('password')">
+            <i *ngIf="passwordType === 'text'" class="fa fa-eye" aria-hidden="true"></i>
+            <i *ngIf="passwordType === 'password'" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </span>
         <mat-error *ngIf="registerForm.get('password').hasError('required')">Password is required</mat-error>
         <mat-error *ngIf="registerForm.get('password').hasError('minlength')">Minimum length 6</mat-error>
     </mat-form-field>
 	<mat-form-field appearance="outline">
         <mat-label>Confirm password</mat-label>
         <input matInput type={{confirmPasswordType}} formControlName="passwordConfirm" autocomplete="off">
-        <mat-icon *ngIf="registerForm.get('passwordConfirm').value" matSuffix class="secondary-text cursor_layout" (click)="passwordVisibility('confirm_password')">
-            <span *ngIf="confirmPasswordType === 'text'">remove_red_eye</span>
-            <span *ngIf="confirmPasswordType === 'password'">vpn_key</span>
-        </mat-icon>
+        <span class="password_icon" *ngIf="registerForm.get('passwordConfirm').value" (click)="passwordVisibility('confirm_password')">
+            <i *ngIf="confirmPasswordType === 'text'" class="fa fa-eye" aria-hidden="true"></i>
+            <i *ngIf="confirmPasswordType === 'password'" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </span>
         <mat-error *ngIf="registerForm.get('passwordConfirm').hasError('required')">
             Password confirmation is required
         </mat-error>
