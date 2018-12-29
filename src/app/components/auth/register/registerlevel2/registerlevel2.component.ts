@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, OnChanges, SimpleChange } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 
@@ -8,6 +8,9 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
   	styleUrls: ['./registerlevel2.component.css']
 })
 export class Registerlevel2Component implements OnInit, OnDestroy {
+    @Input() startTimer: number;
+    private isResendotpEnable: boolean = false;
+    private timeleft: number;
 	private confirmationForm: FormGroup;
   	constructor(private fb: FormBuilder) {
   		// confirmation form
@@ -20,9 +23,28 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
             otp6: ['', Validators.required]
         });
   	}
-	ngOnInit():void {}
+	ngOnInit(): void {}
 	ngOnDestroy(): void {}
-	private next(e: any, el: any) {
+    private ngOnChanges(changes: SimpleChange): void{
+        for (var propName in changes){
+            var currentValue  = changes[propName].currentValue;
+            if(currentValue === 'start timer') {
+                this.otpTimer()
+            }
+        }
+    }
+    private otpTimer(): void {
+        this.isResendotpEnable = false;
+        this.timeleft = 30;
+        var downloadTimer = setInterval(() => { 
+             this.timeleft--;
+            if(this.timeleft <= 0){
+                this.isResendotpEnable = true;
+                clearInterval(downloadTimer);
+            }
+        }, 1000);
+    }
+	private next(e: any, el: any): void {
 		if(e.keyCode === 8){
 			// return
 		}else{
@@ -35,8 +57,13 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
 			}
 		}
   	}
-  	private verifyOtp(element: any){
+  	private verifyOtp(element: any): void{
   		element.blur();
-  		console.log('register');
+        var arr = Object.values(this.confirmationForm.value);
+        var otp: string = ''
+        for(var i = 0; i < arr.length; i++){
+            otp = otp + arr[i]; 
+        }
+        console.log(otp);
   	}
 }

@@ -21,8 +21,11 @@ thisismytrello@123
 
 git config -l to check the info
 
-icon list mat-icon
+icon list mat-icon:
 1. https://material.io/tools/icons/?search=pa&style=baseline
+
+countdown:
+1. https://stackoverflow.com/questions/46316259/timer-countdown-angular-2
 
 Work flow:
 1. Registeration: email password and company name.

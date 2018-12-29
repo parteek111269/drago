@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -9,11 +9,13 @@ import { takeUntil } from 'rxjs/operators';
   	styleUrls: ['./registerlevel1.component.css']
 })
 export class Registerlevel1Component implements OnInit {
+	@Output() emiterForTimer = new EventEmitter();
 	private registerForm: FormGroup;
 	private confirmationForm: FormGroup;
 	private unsubscribeAll: Subject<any>;
 	private passwordType: string = 'password';
 	private confirmPasswordType: string = 'password';
+	
 	constructor(private fb: FormBuilder){
 		this.unsubscribeAll = new Subject();
 		// registeration form
@@ -46,7 +48,10 @@ export class Registerlevel1Component implements OnInit {
 			break;	
 		}
     }
-	private getOtp(){}
+	private getOtp(): void{
+		// after some api call we will move to otp page with timer
+		this.emiterForTimer.emit('start timer');
+	}
 }
 export const confirmPasswordValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
 	if ( !control.parent || !control ){return null;}
