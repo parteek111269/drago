@@ -1,9 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { fuseAnimations } from '../../../animation/animations';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  animations: fuseAnimations
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 	private startTimer: string = 'wait';
