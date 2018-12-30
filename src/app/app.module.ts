@@ -18,6 +18,7 @@ import { ResetpasswordComponent } from './components/auth/resetpassword/resetpas
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
+import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { Registerlevel2Component } from './components/auth/register/registerleve
     ResetpasswordComponent,
     NumberonlyDirective,
     Registerlevel1Component,
-    Registerlevel2Component
+    Registerlevel2Component,
+    MainlayoutComponent
   ],
   imports: [
     BrowserModule,

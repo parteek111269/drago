@@ -46,7 +46,7 @@
                         Forgot Password?
                     </a>
                 </div>
-				<button mat-flat-button color="accent" class="submit_button" aria-label="LOGIN" [disabled]="loginForm.invalid">
+				<button mat-flat-button color="accent" class="submit_button" aria-label="LOGIN" [disabled]="loginForm.invalid" (click)="login(loginForm)">
                     LOGIN
                 </button>
 			</form>
