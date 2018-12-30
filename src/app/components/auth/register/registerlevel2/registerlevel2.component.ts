@@ -44,15 +44,15 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
             }
         }, 1000);
     }
-	private next(e: any, el: any): void {
+	private next(e: any, prevEl: any, nextEl): void {
 		if(e.keyCode === 8){
-			// return
+			prevEl.focus();
 		}else{
 			// allow focus on next el if input is 0-9
 			if((e.keyCode <= 57 && e.keyCode >= 48)){
-				el.focus();
+				nextEl.focus();
 				if(this.confirmationForm.status === 'VALID'){
-					this.verifyOtp(el)
+					this.verifyOtp(nextEl)
 				}
 			}
 		}

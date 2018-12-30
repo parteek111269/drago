@@ -3,22 +3,22 @@
         <table class="otp_table">
             <tr>
                 <td>
-                    <input formControlName="otp1" appNumberonly="true" type="tel" id="otp1" #otp1 class="otp" maxlength="1" size="1" (keyup)="next($event, otp2)" />
+                    <input formControlName="otp1" appNumberonly="true" type="tel" id="otp1" #otp1 class="otp" maxlength="1" size="1" (keyup)="next($event, otp1, otp2)" />
                 </td>
                 <td>
-                    <input formControlName="otp2" appNumberonly="true"  type="tel" id="otp2" #otp2 class="otp" maxlength="1" size="1" (keyup)="next($event, otp3)" />
+                    <input formControlName="otp2" appNumberonly="true"  type="tel" id="otp2" #otp2 class="otp" maxlength="1" size="1" (keyup)="next($event, otp1, otp3)" />
                 </td>
                 <td>
-                    <input formControlName="otp3" appNumberonly="true"  type="tel" id="otp3" #otp3 class="otp" maxlength="1" size="1" (keyup)="next($event, otp4)" />
+                    <input formControlName="otp3" appNumberonly="true"  type="tel" id="otp3" #otp3 class="otp" maxlength="1" size="1" (keyup)="next($event, otp2, otp4)" />
                 </td>
                 <td>
-                    <input formControlName="otp4" appNumberonly="true"  type="tel" id="otp4" #otp4 class="otp" maxlength="1" size="1" (keyup)="next($event, otp5)" />
+                    <input formControlName="otp4" appNumberonly="true"  type="tel" id="otp4" #otp4 class="otp" maxlength="1" size="1" (keyup)="next($event, otp3, otp5)" />
                 </td>
                 <td>
-                    <input formControlName="otp5" appNumberonly="true"  type="tel" id="otp5" #otp5 class="otp" maxlength="1" size="1" (keyup)="next($event, otp6)" />
+                    <input formControlName="otp5" appNumberonly="true"  type="tel" id="otp5" #otp5 class="otp" maxlength="1" size="1" (keyup)="next($event, otp4, otp6)" />
                 </td>
                 <td>
-                    <input formControlName="otp6" appNumberonly="true"  type="tel" id="otp6" #otp6 class="otp" maxlength="1" size="1" (keyup)="next($event, otp6)" />
+                    <input formControlName="otp6" appNumberonly="true"  type="tel" id="otp6" #otp6 class="otp" maxlength="1" size="1" (keyup)="next($event, otp5, otp6)" />
                 </td>
             </tr>
         </table>
