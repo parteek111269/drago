@@ -52,8 +52,6 @@ export class dragoSplashScreenService{
                 zIndex : '-10'
             }))
         ]).create(this.splashScreenEl);
-		setTimeout(() => {
             this.player.play();
-        }, 1000);
     }
 }
