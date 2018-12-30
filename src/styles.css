@@ -36,6 +36,82 @@ address, legend {
 label, output {
     display: inline-block;
 }
+.h1, h1 {
+    font-size: 64px;
+    line-height: 1.09;
+    font-weight: 600;
+}
+@media (max-width:1199.98px) {
+    .h1, h1 {
+    font-size: 56px;
+    line-height: 1;
+}
+}@media (max-width:991.98px) {
+    .h1, h1 {
+    font-size: 52px;
+    line-height: 1;
+}
+}@media (max-width:767.98px) {
+    .h1, h1 {
+    font-size: 46px;
+}
+}.h2, h2 {
+    font-size: 48px;
+    line-height: 1.05;
+}
+@media (max-width:991.98px) {
+    .h2, h2 {
+    font-size: 38px;
+    line-height: 1.16;
+}
+}@media (max-width:767.98px) {
+    .h2, h2 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+}.h3, h3 {
+    font-size: 32px;
+    line-height: 1.06;
+}
+@media (max-width:991.98px) {
+    .h3, h3 {
+    font-size: 26px;
+    line-height: 1.17;
+}
+}@media (max-width:767.98px) {
+    .h3, h3 {
+    font-size: 22px;
+    line-height: 1.2;
+}
+}.h4, h4 {
+    font-size: 26px;
+    line-height: 1.38;
+}
+@media (max-width:991.98px) {
+    .h4, h4 {
+    font-size: 22px;
+    line-height: 1.4;
+}
+}@media (max-width:767.98px) {
+    .h4, h4 {
+    font-size: 18px;
+    line-height: 1.45;
+}
+}.h5, h5 {
+    font-size: 19px;
+    line-height: 1.47;
+}
+@media (max-width:991.98px) {
+    .h5, h5 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+}@media (max-width:767.98px) {
+    .h5, h5 {
+    font-size: 17px;
+    line-height: 1.5;
+}
+}
 /*header animation*/
 @-webkit-keyframes fadeInDown {
     from {
