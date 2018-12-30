@@ -10,4 +10,7 @@ export class AppComponent {
 	constructor(private dragoSplashScreenService: dragoSplashScreenService){
 
 	}
+	changeOfRoutes(){
+		window.scrollTo(0, 0);
+	}
 }
