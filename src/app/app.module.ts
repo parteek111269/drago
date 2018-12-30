@@ -1,17 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//  Angular material design components
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatCardModule} from '@angular/material/card';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
-import {MatStepperModule} from '@angular/material/stepper';
+//  animation
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Angular material design components
+import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatStepperModule } from '@angular/material/stepper';
 // routing
-import {routing} from './app-routing.module';
+import { routing } from './app-routing.module';
 //  Components
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -40,13 +36,9 @@ import { Registerlevel2Component } from './components/auth/register/registerleve
     BrowserModule,
     routing,
     FormsModule, ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatBadgeModule,
-    MatCardModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatGridListModule, MatStepperModule,
-    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule
+    BrowserAnimationsModule, 
+    MatStepperModule,
+    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
