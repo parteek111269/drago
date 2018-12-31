@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,12 +7,10 @@ import { Router } from '@angular/router';
   	styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-
 	constructor(private router: Router) {
 		if(localStorage.isloggedIn){
             this.router.navigate(['/dashboard']);
         }
 	}
 	ngOnInit(): void {}
-
 }
