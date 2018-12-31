@@ -23,7 +23,7 @@
             </tr>
         </table>
     </div>
-    <button mat-flat-button color="accent" class="submit_button" aria-label="resend otp" [disabled]="isResendotpEnable === false" (click)="otpTimer()">
+    <button mat-flat-button class="submit_button btn-primary" aria-label="resend otp" [disabled]="isResendotpEnable === false" (click)="otpTimer()">
         Resend OTP <span *ngIf="timeleft != 0">in {{timeleft}} seconds.</span>
     </button>
 </form>

@@ -34,7 +34,7 @@ a.mat-flat-button:hover{
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 .btn-primary{
-    color: #ffffff;
+    color: #ffffff!important;
     background-color: #E7475E !important;
     border-color: #E7475E !important;
     padding: 0.2rem 2.4rem !important;
@@ -55,4 +55,7 @@ button.btn{
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
     box-shadow: none!important;
+}
+.mat-fab.mat-accent[disabled], .mat-fab.mat-primary[disabled], .mat-fab.mat-warn[disabled], .mat-fab[disabled][disabled], .mat-flat-button.mat-accent[disabled], .mat-flat-button.mat-primary[disabled], .mat-flat-button.mat-warn[disabled], .mat-flat-button[disabled][disabled], .mat-mini-fab.mat-accent[disabled], .mat-mini-fab.mat-primary[disabled], .mat-mini-fab.mat-warn[disabled], .mat-mini-fab[disabled][disabled], .mat-raised-button.mat-accent[disabled], .mat-raised-button.mat-primary[disabled], .mat-raised-button.mat-warn[disabled], .mat-raised-button[disabled][disabled]{
+    background-color: rgba(0,0,0,.12)!important;
 }
