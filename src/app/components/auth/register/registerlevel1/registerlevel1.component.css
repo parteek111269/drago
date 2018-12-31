@@ -1,4 +1,8 @@
+@import "../../../../../common_styles/authlayout.css";
 .password_icon{
 	position: absolute;
 	right: 10px;
+}
+.mat-form-field{
+	display: block;
 }

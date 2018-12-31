@@ -19,6 +19,7 @@ import { NumberonlyDirective } from './directives/numberonly/numberonly.directiv
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MainlayoutComponent } from './components/mainlayout/mainlayout.componen
     NumberonlyDirective,
     Registerlevel1Component,
     Registerlevel2Component,
-    MainlayoutComponent
+    MainlayoutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

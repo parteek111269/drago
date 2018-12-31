@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
 	private loginForm: FormGroup;
     private passwordType: string = 'password';
   	constructor(private fb: FormBuilder, private router: Router){
+        if(localStorage.isloggedIn){
+            this.router.navigate(['/dashboard']);
+        }
   		this.loginForm = this.fb.group({
             email   : ['', [Validators.required, Validators.email]],
             password: ['', [Validators.required, Validators.minLength(6)]]
@@ -23,6 +26,8 @@ export class LoginComponent implements OnInit {
     }
     private login(loginData: any) {
         if(loginData.status === 'VALID'){
+            var isloggedIn: any = true;
+            localStorage.setItem('isloggedIn', isloggedIn)
             this.router.navigate(['/dashboard']);
         }
     }

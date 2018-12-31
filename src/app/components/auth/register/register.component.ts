@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { fuseAnimations } from '../../../animation/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,11 @@ import { fuseAnimations } from '../../../animation/animations';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 	private startTimer: string = 'wait';
-	constructor(){}
+	constructor(private router: Router){
+		if(localStorage.isloggedIn){
+            this.router.navigate(['/dashboard']);
+        }
+	}
 	ngOnInit(): void {}
 	ngOnDestroy(): void {}
 	// inform registerlevel2 to start timer

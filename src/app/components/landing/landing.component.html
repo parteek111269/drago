@@ -1,257 +1,129 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar_custom show-on-scroll-2 fixed-top bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="assets/logos/drago.svg" alt="" class="img-fluid">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#pricing">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['login']">Login</a>
-                </li>
-                <li class="nav-item mr-0">
-                    <a class="nav-link nav-link--register" [routerLink]="['register']">Register</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<main id="home" class="hero hero--9 hero--bg">
-    <div class="container">
-        <div class="row d-flex align-items-center match-height">
-            <div class="col-lg-6 hero__left">
-                <h1 class="title">How Chatbot Will Save Your Time</h1>
-                <p class="lead">Quod quidem iam fit etiam in Academia. Quando enim Socrates, qui parens.</p>
+<app-header></app-header>
+<main id="home" class="main_section">
+    <div class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 main_section_left">
+                <h1 class="title mb-0">Move work <br> forward</h1>
                 <div class="row">
-                    <div class="col-lg-11">
-                        <form action="#" class="hero__form pr-0 pr-lg-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control--lg" placeholder="mail@company.com">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control--lg" placeholder="Johnny Doe">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control--lg" placeholder="5+ Characters">
-                            </div>
-                            <div class="form-group mb-0">
-                                <button class="btn btn--primary btn--lg w-100" type="submit">Be The First Notified</button>
-                            </div>
-                            <small class="form__disclaimer">
-                                By submitting this form I agree to Company Terms.
-                            </small>
-                        </form>
+                    <div class="col-lg-10">
+                        <p class="description lead text-muted mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur. Eiusmod tempor incididunt.</p>
                     </div>
                 </div>
+                <form action="#" class="subscription_form">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Name@company.com" class="form-control">
+                        <a mat-flat-button class="btn-primary" [routerLink]="['register']">Get Started</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 main_section_right">
+                <img src="assets/img/main_section_right.svg" alt="" class="main_section_right_image img-fluid d-none d-lg-block">  
             </div>
         </div>
     </div>
-    <div class="hero__illustration">
-        <img src="assets/img/illustration-15.png" alt="">
-    </div>
-    <div class="hero__subtle-radius"></div>
 </main>
 
-<section id="features" class="section section--padding features features--4">
+<section id="features" class="section1">
     <div class="container">
-        <div class="row">
-            <div class="preamble col-lg-8 offset-lg-2 text-center">
-                <h2 class="h2 title">What Everyone Must Know.</h2>
-                <p class="lead">Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. Quis animo aequo videt eum, quem.</p>
-            </div>
+        <div class="text-center">
+            <h2>Track projects from start to finish </h2>
+            <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            <a href="#" mat-flat-button class="btn-primary">Learn More</a>
         </div>
         <div class="row">
-            <div class="feature col-md-4 mb-5 mb-md-0">
-                <img src="assets/img/illustration-7.png" alt="" class="feature__illustration img-fluid">
-                <h4>24/7 Real Support</h4>
-                <p>Feature creep going forward you better eat a reality sandwich before you walk back in that boardroom.</p>
-            </div>
-            <div class="feature col-md-4 mb-5 mb-md-0">
-                <img src="assets/img/illustration-8.png" alt="" class="feature__illustration img-fluid">
-                <h4>SSL Domain</h4>
-                <p>Can you ballpark the cost per unit for me accountable talk bells and whistles, so goalposts for where.</p>
-            </div>
-            <div class="feature col-md-4">
-                <img src="assets/img/illustration-9.png" alt="" class="feature__illustration img-fluid">
-                <h4>Wordpress One Click</h4>
-                <p>We want to see more charts streamline, or we need to build it so that it scales marketing computer.</p>
+            <div class="col-lg-7 mx-auto mt-5">
+                <img src="assets/img/section1.svg" alt="" class="intro-image img-fluid">
             </div>
         </div>
     </div>
 </section>
 
-<section id="about" class="section section--padding tour tour--8">
+<section id="about" class="section2 primary_bg text-white">
     <div class="container">
-        <div class="row">
-            <div class="preamble col-lg-8 offset-lg-2 text-center">
-                <h2 class="h2 title">Developer friendly</h2>
-                <p class="lead">Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. Age nunc isti. Non minor, inquit, voluptas percipitur.</p>
+        <div class="text-center">
+            <h2>Do great things together</h2>
+            <div class="row">
+                <div class="col-lg-9 mx-auto">
+                    <p class="lead text-white mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor incididunt ut labore et dolore.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
-                <ul class="features-list list-unstyled mb-0 pr-5">
-                    <li class="d-flex">
-                        <i class="icon icon-Wifi-2 icon--md"></i>
-                        <div class="ml-4">
-                            <h5>Secured Clouds</h5>
-                            <p>Shoot me an email we've got to manage that low hanging fruit that jerk. Powerpoint Bunny we need distributors to evangelize.</p>
-                        </div>
-                    </li>
-                    <li class="d-flex">
-                        <i class="icon icon-SSL icon--md"></i>
-                        <div class="ml-4">
-                            <h5>SSL Domain Certificate</h5>
-                            <p>Can you ballpark the cost per unit for me accountable talk bells and whistles, so goalposts for where the metal hits.</p>
-                        </div>
-                    </li>
-                    <li class="d-flex">
-                        <i class="icon icon-Wordpress icon--md"></i>
-                        <div class="ml-4">
-                            <h5>Wordpress One Click</h5>
-                            <p>We want to see more charts streamline, or we need to build it so that it scales marketing computer development.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xl-6 col-lg-6 order-1 order-lg-2">
-                <img src="assets/img/illustration-10.png" alt="" class="img-fluid mb-5 mb-lg-0">
-            </div>
+            <a href="#" mat-stroked-button class="btn-outline-light">Learn More</a>
         </div>
     </div>
 </section>
 
-<section class="section section--padding tour tour--8">
+<section class="section3">
     <div class="container">
-        <div class="row">
-            <div class="preamble col-lg-8 offset-lg-2 text-center">
-                <h2 class="h2 title">Always Connected to Your Team</h2>
-                <p class="lead">Ita redarguitur ipse a sese, convincunturque scripta eius probitate ipsius ac moribus. Age nunc isti. Non minor, inquit, voluptas percipitur. Ita nunc isti doceant ipse a sese.</p>
+        <div class="text-center">
+            <h2>Integrations</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. eiusmod tempor incididunt ut labore.</p>
+                </div>
             </div>
         </div>
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-lg-8">
-                <img src="assets/img/illustration-12.png" alt="" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="pricing" class="section section--full-padding pricing pricing--1">
-    <div class="container">
-        <div class="row">
-            <div class="preamble col-lg-8 offset-lg-2 text-center">
-                <h2 class="h2 title">Simple Pricing</h2>
-                <p class="lead"> Hamburger t-bone biltong chuck beef aliquip nisi sed ad duis. Pork chop fatback nulla drumstick. Short ribs.</p>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-12">
-                <div class="row no-gutters">
-                    <div class="col-lg-3">
-                        <div class="pricing-option">
-                            <header class="pricing-option__header">
-                                <i class="icon icon-Tree-2"></i>
-                                <h5>Solo</h5>
-                                <h3 class="price d-flex justify-content-center">Free</h3>
-                            </header>
-                            <ul class="pricing-option__list list-unstyled">
-                                <li>1 Website</li>
-                                <li>10 MySQL Database</li>
-                                <li>5 FTP User</li>
-                                <li class="disabled">100 Email Account</li>
-                                <li class="disabled">Unlimited Website Builder</li>
-                                <li class="disabled">Unlimited Control Panel</li>
-                                <li class="disabled">User Friendly Manager</li>
-                            </ul>
-                            <div class="text-center">
-                                <a class="btn btn--primary" href="#">Get Started Now</a>
-                            </div>
+        <div class="integrations mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
                         </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="pricing-option">
-                            <header class="pricing-option__header">
-                                <i class="icon icon-Business-Man"></i>
-                                <h5>Basic</h5>
-                                <h3 class="price d-flex justify-content-center"><span>$</span>9.99</h3>
-                            </header>
-                            <ul class="pricing-option__list list-unstyled">
-                                <li>1 Website</li>
-                                <li>10 MySQL Database</li>
-                                <li>5 FTP User</li>
-                                <li>100 Email Account</li>
-                                <li class="disabled">Unlimited Website Builder</li>
-                                <li class="disabled">Unlimited Control Panel</li>
-                                <li class="disabled">User Friendly Manager</li>
-                            </ul>
-                            <div class="text-center">
-                                <a class="btn btn--primary" href="#">Get Started Now</a>
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
                         </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="pricing-option pricing-option--shadow">
-                            <header class="pricing-option__header">
-                                <i class="icon icon-Business-ManWoman"></i>
-                                <h5>Advanced</h5>
-                                <h3 class="price d-flex justify-content-center"><span>$</span>29.99</h3>
-                            </header>
-                            <ul class="pricing-option__list list-unstyled">
-                                <li>10 Websites</li>
-                                <li>50 MySQL Database</li>
-                                <li>15 FTP User</li>
-                                <li>500 Email Account</li>
-                                <li>Unlimited Website Builder</li>
-                                <li class="disabled">Unlimited Control Panel</li>
-                                <li class="disabled">User Friendly Manager</li>
-                            </ul>
-                            <div class="text-center">
-                                <a class="btn btn--primary" href="#">Get Started Now</a>
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
                         </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="pricing-option pricing-option--last">
-                            <header class="pricing-option__header">
-                                <i class="icon icon-Business-Mens"></i>
-                                <h5>Enterprise</h5>
-                                <h3 class="price d-flex justify-content-center"><span>$</span>49.99</h3>
-                            </header>
-                            <ul class="pricing-option__list list-unstyled">
-                                <li>Unlimited Websites</li>
-                                <li>200 MySQL Database</li>
-                                <li>50 FTP User</li>
-                                <li>1000 Email Account</li>
-                                <li>Unlimited Website Builder</li>
-                                <li>Unlimited Control Panel</li>
-                                <li>User Friendly Manager</li>
-                            </ul>
-                            <div class="text-center">
-                                <a class="btn btn--primary" href="#">Get Started Now</a>
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
                         </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box text-center">
+                        <div class="icon d-flex align-items-end">
+                            <img src="assets/img/monitor.svg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h4">Web desgin</h3>
+                        <p class="text-small font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
@@ -259,144 +131,124 @@
     </div>
 </section>
 
-<section id="faq" class="section section--full-padding section--gradient-4 faq faq--3">
+<section id="pricing" class="section4 bg-gray">
     <div class="container">
-        <div class="row">
-            <div class="preamble col-lg-7">
-                <h2 class="h2 title">Most Popular Questions</h2>
-                <p class="lead pl-0">Hamburger t-bone biltong chuck beef aliquip nisi sed ad duis. Pork chop fatback nulla drumstick. Short ribs.</p>
+        <div class="text-center">
+            <h2>Trusted by teams everywhere</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. sed do eiusmod tempor incididunt..</p>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="clients mt-5">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="assets/img/client-1.svg" alt="" class="client-image img-fluid">
+                </div>
+                <div class="col-lg-2">
+                    <img src="assets/img/client-2.svg" alt="" class="client-image img-fluid">
+                </div>
+                <div class="col-lg-2">
+                    <img src="assets/img/client-3.svg" alt="" class="client-image img-fluid">
+                </div>
+                <div class="col-lg-2">
+                    <img src="assets/img/client-4.svg" alt="" class="client-image img-fluid">
+                </div>
+                <div class="col-lg-2">
+                    <img src="assets/img/client-5.svg" alt="" class="client-image img-fluid">
+                </div>
+                <div class="col-lg-2">
+                    <img src="assets/img/client-6.svg" alt="" class="client-image img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="section5">
+    <div class="container">
+        <div class="text-center">
+            <h2>Curious how Appton works for <br>large organizations?</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                    <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Eiusmod tempor incididunt ut labore.</p>
+                </div>
+            </div>
+            <a href="#" mat-flat-button class="btn-primary mt-4">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<section id="cta" class="section6 bg-gray">
+    <div class="container text-center text-lg-left">
+        <div class="row align-items-center">
             <div class="col-lg-7">
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    My team has credits. How do we use them?
-                                </button>
-                            </h5>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
+                <h2 class="divider-heading">Curious how Appton <br>works for large</h2>
+                <div class="row">
+                    <div class="col-lg-10">
+                        <p class="lead divider-subtitle mt-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing. Vitae animi mollitia cumque sunt soluta. consectetur adipisicing.</p>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    We need to add new users to our team.
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Get more information on billing at Slack.
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    What are my payment options: Credit card?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" mat-flat-button class="btn-primary">Learn More</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="">
-        <img class="faq_illustration_img" src="assets/img/illustration-11.png">
-    </div>
-</section>
-
-<section id="cta" class="cta cta--2">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="cta__inner d-block d-lg-flex align-items-center">
-                    <h4 class="title">Start using Posty for free!</h4>
-                    <form action="#" class="cta__form d-block d-sm-flex ml-auto">
-                        <input type="text" placeholder="Work Email Address" class="form-control form-control--lg">
-                        <button class="btn btn--primary">Get Posty</button>
-                    </form>
-                </div>
+            <div class="col-lg-5 mt-5 mt-lg-0">
+                <img src="assets/img/illustration-2.svg" alt="" class="divider-image img-fluid">
             </div>
         </div>
     </div>
 </section>
 
-<footer id="footer" class="footer footer--3">
+<footer id="footer" class="main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-5">
-                <div class="d-flex align-items-center mb-4">
-                    <img src="assets/img/logo.svg" alt="" class="footer__logo mr-3">
-                    <h4 class="mb-0">Posty</h4>
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="assets/img/logo-footer.svg" alt="..." class="img-fluid">
+                    </div>
                 </div>
-                <p>
-                    Copyright © 2018 Posty. All Rights Reserved.<br>
-                    +48 123 456 7890<br>
-                    support@posty.app
-                </p>
-                <ul class="list-unstyled footer__social d-flex">
-                    <li><a href="#"><i class="socicon socicon-facebook icon"></i></a></li>
-                    <li><a href="#"><i class="socicon socicon-twitter icon"></i></a></li>
-                    <li><a href="#"><i class="socicon socicon-google icon"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-4">
-                <h5>Company</h5>
-                <ul class="list-unstyled footer__navi">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Work with Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-4">
-                <h5>Developers</h5>
-                <ul class="list-unstyled footer__navi">
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Developer Kit</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-4">
-                <h5>Support</h5>
-                <ul class="list-unstyled footer__navi">
-                    <li><a href="#">New Ticket</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Get in Touch</a></li>
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="footer-heading">Site pages</h5>
+                    <ul class="list-unstyled">
+                        <li> <a href="#" class="footer-link">Home</a></li>
+                        <li> <a href="#" class="footer-link">FAQ</a></li>
+                        <li> <a href="#" class="footer-link">Contact</a></li>
+                        <li> <a href="#" class="footer-link">Text Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="footer-heading">Product</h5>
+                    <ul class="list-unstyled">
+                        <li> <a href="#" class="footer-link">Why Appton?</a></li>
+                        <li> <a href="#" class="footer-link">Enterprise</a></li>
+                        <li> <a href="#" class="footer-link">Blog</a></li>
+                        <li> <a href="#" class="footer-link">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="list-unstyled">
+                    <li> <a href="#" class="footer-link">Download</a></li>
+                    <li> <a href="#" class="footer-link">Help Center</a></li>
+                    <li> <a href="#" class="footer-link">Guides</a></li>
+                    <li> <a href="#" class="footer-link">Partners</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    <div class="copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <p class="copyrights-text mb-3 mb-lg-0">© All rights reserved. Appton.co. Design by <a href="https://bootstrapious.com/landing-pages" class="external footer-link">Bootstrapious </a></p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <ul class="list-inline social mb-0">
+                        <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook"></i></a><a href="#" class="social-link"><i class="fa fa-twitter"></i></a><a href="#" class="social-link"><i class="fa fa-youtube-play"></i></a><a href="#" class="social-link"><i class="fa fa-vimeo"></i></a><a href="#" class="social-link"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
 </footer>
 

@@ -1,3 +1,4 @@
+@import "../../../../../common_styles/authlayout.css";
 .otp_box .otp{
 	color: #000000db;
 	border-style: none;
