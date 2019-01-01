@@ -1,6 +1,60 @@
-.example-container {
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-  border: 1px solid #555;
+content.inner-scroll>:not(router-outlet){
+	flex: 1 1 0%;
+}
+content>:not(router-outlet) {
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 100%;
+}
+content {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    flex: 1 0 auto;
+}
+content.inner-scroll{
+	flex: 1 1 0%;
+    min-height: 0;
+}
+/*content_outer*/
+.content_outer{
+	position: relative;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.main_wrapper{
+	position: relative;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    min-width: 0;
+}
+.main_wrapper_outer{
+	position: relative;
+    display: flex;
+    flex: 1 1 0%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+}
+.main_inner{
+	position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    min-width: 0;
+}
+.main{
+	display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
 }

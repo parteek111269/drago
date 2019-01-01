@@ -1,3 +1,13 @@
-<div class="main_outer">
-	<router-outlet (activate)="changeOfRoutes()"></router-outlet>
+<div class="main">
+	<div class="main_inner">
+		<div class="main_wrapper_outer">
+			<div class="main_wrapper">
+				<div class="content_outer">
+					<content class="inner-scroll">
+						<router-outlet (activate)="changeOfRoutes()"></router-outlet>
+					</content>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
