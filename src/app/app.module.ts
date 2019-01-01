@@ -8,6 +8,8 @@ import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule 
 import { MatStepperModule } from '@angular/material/stepper';
 // routing
 import { routing } from './app-routing.module';
+// flex layout
+import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -42,7 +44,8 @@ import { ScrumboardComponent } from './components/scrumboard/scrumboard.componen
     BrowserModule,
     routing,
     FormsModule, ReactiveFormsModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     MatStepperModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
   ],

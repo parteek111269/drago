@@ -1,24 +1,21 @@
 <!-- BOARDS -->
-<div id="boards" class="fuse-navy boards_wrapper ps">
+<div id="boards" class="fuse-navy ps" fxLayout="column" fxLayoutAlign="start center" fxFlex>
 
-    <div class="header pt-44 pt-md-88">
+    <div class="header pt-44 pt-md-88" fxLayout="row" fxLayoutAlign="center center" fxFlex="0 0 auto">
         <h1>Scrumboard App</h1>
     </div>
 
     <!-- BOARD LIST -->
-    <div class="board-list board-list-layout">
+    <div class="board-list" fxFlex="0 0 auto" fxLayout="row wrap" fxLayoutAlign="center center">
 
         <!-- BOARD -->
-        <!-- <div class="board-list-item" *ngFor="let board of boards">
-            <mat-icon class="s-56">assessment</mat-icon>
-            <div class="board-name">{{board.name}}</div>
-        </div> -->
-        <div class="board-list-item .board-list-item-layout">
+        <!-- *ngFor="let board of boards" -->
+        <div class="board-list-item" fxLayout="column" fxLayoutAlign="center center">
         	<div class="board-name">ACME Frontend Application</div></div>
         <!-- / BOARD -->
 
         <!-- NEW BOARD BUTTON -->
-        <div class="board-list-item add-new-board">
+        <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center">
             <div class="board-name">Add new board</div>
         </div>
         <!-- / NEW BOARD BUTTON -->
