@@ -40,7 +40,7 @@
             Passwords must match
         </mat-error>
     </mat-form-field>
-	<div class="form_bottom_block form_bottom_block_layout">
+	<div class="form_bottom_block" fxLayout="row" fxLayoutAlign="center center">
         <mat-checkbox formControlName="terms" name="terms" aria-label="Accept" required>
             <span>Accept <a href="#">terms and conditions</a></span>
         </mat-checkbox>
@@ -49,7 +49,7 @@
         CREATE AN ACCOUNT
     </button>
 </form>
-<div class="auth_bottom_block auth_bottom_block_layout">
+<div class="auth_bottom_block" fxLayout="column" fxLayoutAlign="center center">
     <span class="text">Already have an account?</span>
     <a class="link" [routerLink]="['/login']">Login</a>
 </div>

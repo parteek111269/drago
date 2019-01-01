@@ -1,5 +1,5 @@
-<div class="inner-scroll auth_container auth_layout">
-	<div class="auth_left_wrapper auth_left_wrapper_layout">
+<div class="inner-scroll auth_container" fxLayout="row" fxLayoutAlign="start">
+	<div class="auth_left_wrapper" fxFlex fxHide fxShow.gt-xs>
 		<div class="auth_left_wrapper_logo" [@animate]="{value:'*',params:{scale:'0.2'}}">
             <img src="assets/logos/drago.svg">
         </div>
@@ -13,7 +13,7 @@
 	</div>
 	<div class="auth_right_wrapper ps" [@animate]="{value:'*',params:{delay:'300ms',x:'100%'}}">
 		<div class="auth_form">
-			<div class="logo">
+			<div class="logo" fxHide.gt-xs>
                 <img src="assets/logos/drago.svg">
             </div>
 			<div class="auth_form_title">LOGIN TO YOUR ACCOUNT</div>
@@ -38,7 +38,8 @@
                     <mat-error *ngIf="loginForm.get('password').hasError('required')">Password is required</mat-error>
                     <mat-error *ngIf="loginForm.get('password').hasError('minlength')">Minimum length 6</mat-error>
                 </mat-form-field>
-				<div class="form_bottom_block form_bottom_block_layout">
+				<div class="form_bottom_block" fxLayout="row" fxLayout.xs="column"
+                     fxLayoutAlign="space-between center">
                     <mat-checkbox class="remember_me" aria-label="Remember Me">
                         Remember Me
                     </mat-checkbox>
@@ -50,7 +51,7 @@
                     LOGIN
                 </button>
 			</form>
-			<div class="auth_bottom_block auth_bottom_block_layout">
+			<div class="auth_bottom_block" fxLayout="column" fxLayoutAlign="center center">
                 <span class="text">Don't have an account?</span>
                 <a class="link" [routerLink]="['/register']">Create an account</a>
             </div>

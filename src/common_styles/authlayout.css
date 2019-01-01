@@ -3,22 +3,9 @@
     overflow: hidden;
     background: url(/assets/img/backgrounds/dark-material-bg.jpg) 0 0/cover no-repeat;
 }
-.auth_layout{
-	flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-    max-height: 100%;
-    place-content: stretch flex-start;
-    align-items: stretch;
-}
 .auth_left_wrapper{
 	color: #fff;
 	padding: 128px;
-}
-.auth_left_wrapper_layout{
-	flex: 1 1 0%;
-    box-sizing: border-box;
-    display: block;
 }
 .auth_left_wrapper_logo{
 	width: 128px;
@@ -79,14 +66,6 @@
 	font-size: 13px;
     margin-top: 8px;
 }
-.form_bottom_block_layout{
-	flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-    max-height: 100%;
-    place-content: center space-between;
-    align-items: center;
-}
 .remember_me{
 	margin-bottom: 16px;
 }
@@ -108,14 +87,6 @@ mat-checkbox.remember_me{
 	margin: 32px auto 24px;
     width: 250px;
     font-weight: 600;
-}
-.auth_bottom_block_layout{
-	flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    max-width: 100%;
-    place-content: center;
-    align-items: center;
 }
 .auth_bottom_block .text{
 	margin-right: 8px;
