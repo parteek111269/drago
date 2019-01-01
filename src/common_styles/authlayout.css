@@ -44,6 +44,12 @@
     touch-action: auto;
     -ms-touch-action: auto;
 }
+.auth_right_wrapper .logo img{
+	max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    border: none;
+}
 .auth_form{
 	padding: 128px 48px 48px;
 }
@@ -96,9 +102,6 @@ mat-checkbox.remember_me{
 }
 /*media classes*/
 @media screen and (max-width: 959px) and (min-width: 600px){
-	.lauth_left_wrapper_layout{
-	    padding: 128px 64px;
-	}
 	.auth_right_wrapper{
 		width: 360px;
 	    min-width: 360px;
@@ -106,9 +109,6 @@ mat-checkbox.remember_me{
 	}
 }
 @media screen and (max-width: 599px){
-	.auth_left_wrapper_layout{
-		display: none;
-	}
 	.auth_right_wrapper{
 	    width: 100%;
 	    min-width: 100%;

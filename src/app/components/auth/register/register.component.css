@@ -1,7 +1,4 @@
 @import "../../../../common_styles/authlayout.css";
-.auth_form{
-	padding: 128px 30px 48px;
-}
 ::ng-deep .mat-horizontal-stepper-header-container {
 	display: none !important;
 }
