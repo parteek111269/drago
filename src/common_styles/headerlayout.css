@@ -39,10 +39,11 @@
     animation: fadeInDown .3s ease-out forwards;
 }
 .navbar_custom {
-    position: absolute;
-    background-color: transparent!important;
+    /*position: absolute;*/
+    background-color: #efefef !important;
     border: 0;
-    padding: 1.1rem 1rem
+    padding: 1.1rem 1rem;
+    z-index: 9999;
 }
 .navbar_custom.animate {
     position: fixed;

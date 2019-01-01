@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar_custom show-on-scroll-2 fixed-top bg-light">
+<nav class="navbar navbar-expand-lg navbar-light navbar_custom show-on-scroll-2 bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="assets/logos/drago.svg" alt="" class="img-fluid">
@@ -35,7 +35,7 @@
         <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Projects</a>
+                    <a class="nav-link" [routerLink]="['projects']">Projects</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

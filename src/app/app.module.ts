@@ -20,6 +20,7 @@ import { Registerlevel1Component } from './components/auth/register/registerleve
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { HeaderComponent } from './components/header/header.component';
     Registerlevel1Component,
     Registerlevel2Component,
     MainlayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    ScrumboardComponent
   ],
   imports: [
     BrowserModule,

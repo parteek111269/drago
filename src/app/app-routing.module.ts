@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
+import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
 const appRoute: Routes = [
 	{path: '', component: LandingComponent},
@@ -16,7 +17,11 @@ const appRoute: Routes = [
 	{path: 'register', component: RegisterComponent},
 	{path: 'forget-password', component: ForgotpasswordComponent},
 	{path: 'reset-password', component: ResetpasswordComponent},
-	{path: 'dashboard', component: MainlayoutComponent}
+	{path: 'dashboard', component: MainlayoutComponent, children: 
+		[
+			{path: 'projects', component: ScrumboardComponent}
+		]
+	}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoute);
