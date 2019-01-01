@@ -1,0 +1,89 @@
+.fuse-navy {
+    background-color: #3c4252!important;
+    color: #fff!important;
+}
+.ps{
+	position: relative;
+}
+#boards {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.boards_wrapper{
+	flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+    flex: 1 1 0%;
+}
+.header-layout{
+	flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+.pt-44 {
+    padding-top: 44px!important;
+}
+@media screen and (min-width: 960px){
+	.pt-md-88 {
+		padding-top: 88px!important;
+	}
+}
+
+
+#boards .header h1{
+	font-size: 40px;
+    font-weight: 300;
+}
+.board-list{
+	padding: 32px 0;
+    max-height: none !important;
+    
+}
+.board-list-layout{
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.board-list .board-list-item{
+	min-width: 210px;
+    min-height: 210px;
+    width: 210px;
+    height: 210px;
+    padding: 24px 0;
+    margin: 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.12);
+    transition: box-shadow 150ms ease-in;
+    cursor: pointer;
+}
+.board-list-item-layout{
+	flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 100%;
+    place-content: center;
+    align-items: center;
+}
+
+.board-list .board-name {
+    padding: 16px 32px 0 32px;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+.add-new-board {
+    background: rgba(0,0,0,.06);
+    border: 2px dashed rgba(255,255,255,.37);
+}    
+
+
