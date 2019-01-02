@@ -34,3 +34,5 @@ Work flow:
 1. Registeration: email password and company name.
 2. Verification: A 4 or 6 digit number will be pushed to user's email.
 
+https://stackoverflow.com/questions/43977024/show-loading-bar-for-every-http-request-angular2
+

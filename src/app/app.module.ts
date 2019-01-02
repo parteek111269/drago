@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular material design components
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 // routing
 import { routing } from './app-routing.module';
 // flex layout
@@ -23,6 +25,7 @@ import { Registerlevel2Component } from './components/auth/register/registerleve
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
+import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import { ScrumboardComponent } from './components/scrumboard/scrumboard.componen
     Registerlevel2Component,
     MainlayoutComponent,
     HeaderComponent,
-    ScrumboardComponent
+    ScrumboardComponent,
+    ProgressbarComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { ScrumboardComponent } from './components/scrumboard/scrumboard.componen
     FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatStepperModule,
+    MatStepperModule, MatProgressBarModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
   ],
   providers: [],
