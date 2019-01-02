@@ -74,3 +74,6 @@ label, output {
         -webkit-font-smoothing: antialiased;
     }
 }
+content.inner-scroll .inner-scroll{
+    min-height: 100vh;
+}
