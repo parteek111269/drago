@@ -74,6 +74,9 @@ label, output {
         -webkit-font-smoothing: antialiased;
     }
 }
-content.inner-scroll .inner-scroll{
+content.inner-scroll .auth_container{
     min-height: 100vh;
+}
+content.inner-scroll .main-content{
+    min-height: calc(100vh - 72px);
 }
