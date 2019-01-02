@@ -14,27 +14,7 @@ import { dragoSplashScreenService } from '../@drago/splashscreen.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	// loading: boolean = false;
-	constructor(private router: Router, private dragoSplashScreenService: dragoSplashScreenService){
-		// this.router.events.subscribe((event: Event) => {
-		// 	console.log(event instanceof NavigationStart)
-	 //      	switch (true) {
-	 //        	case event instanceof NavigationStart: {
-	 //          		this.loading = true;
-	 //          		break;
-	 //        	}
-		// 		case event instanceof NavigationEnd:
-	 //        	case event instanceof NavigationCancel:
-	 //        	case event instanceof NavigationError: {
-	 //          		this.loading = false;
-	 //          		break;
-	 //        	}
-	 //        	default: {
-	 //          		break;
-	 //        	}
-	 //      	}
-	 //    });
-	}
+	constructor(private router: Router, private dragoSplashScreenService: dragoSplashScreenService){}
 	changeOfRoutes(): void{
 		window.scrollTo(0, 0);
 	}
