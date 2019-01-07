@@ -1,21 +1,21 @@
 <!-- BOARDS -->
 <div id="boards" class="main-content fuse-navy ps" fxLayout="column" fxLayoutAlign="start center" fxFlex>
 
-    <div class="header pt-44 pt-md-88" fxLayout="row" fxLayoutAlign="center center" fxFlex="0 0 auto">
+    <div class="header pt-44 pt-md-88" fxLayout="row" fxLayoutAlign="center center" fxFlex="0 0 auto" [@animate]="{value:'*',params:{delay:'100ms'}}">
         <h1>Scrumboard App</h1>
     </div>
 
     <!-- BOARD LIST -->
-    <div class="board-list" fxFlex="0 0 auto" fxLayout="row wrap" fxLayoutAlign="center center">
+    <div class="board-list" fxFlex="0 0 auto" fxLayout="row wrap" fxLayoutAlign="center center" [@animateStagger]="{value:'50'}">
 
         <!-- BOARD -->
         <!-- *ngFor="let board of boards" -->
-        <div class="board-list-item" fxLayout="column" fxLayoutAlign="center center">
+        <div class="board-list-item" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
         	<div class="board-name">ACME Frontend Application</div></div>
         <!-- / BOARD -->
 
         <!-- NEW BOARD BUTTON -->
-        <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center">
+        <div class="board-list-item add-new-board" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
             <div class="board-name">Add new board</div>
         </div>
         <!-- / NEW BOARD BUTTON -->

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 // progress bar service
-import { ProgressBarService } from './progressbar.service';
+import { ProgressBarService } from '../../services/progressbar/progressbar.service';
 @Component({
   	selector: 'app-progressbar',
   	templateUrl: './progressbar.component.html',

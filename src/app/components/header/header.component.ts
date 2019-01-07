@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProgressBarService } from '../progressbar/progressbar.service'
+import { ProgressBarService } from '../../services/progressbar/progressbar.service'
 
 @Component({
   	selector: 'app-header',
@@ -23,6 +23,6 @@ export class HeaderComponent implements OnInit {
 			localStorage.clear();
 			this.router.navigate(['']);
 			this.pb.hide();
-		}, 2500);
+		}, 1000);
 	}
 }
