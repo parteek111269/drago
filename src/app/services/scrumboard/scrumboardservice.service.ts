@@ -14,12 +14,11 @@ export class ScrumboardserviceService implements Resolve<any> {
   	constructor(private http: HttpClient) {
   		// Set the defaults
         this.onBoardsChanged = new BehaviorSubject([]);
-        this.getBoards();
+        // this.getBoards();
   	}
   	// resolver
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
     	this.routeParams = route.params;
-    	console.log('this.routeParams');
     	return new Promise((resolve, reject) => {
             Promise.all([
                 this.getBoards()

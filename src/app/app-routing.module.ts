@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {ModuleWithProviders} from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // components
@@ -11,6 +11,9 @@ import { ResetpasswordComponent } from './components/auth/resetpassword/resetpas
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
+// services to resolve
+import { ScrumboardserviceService } from './services/scrumboard/scrumboardservice.service';
+
 const appRoute: Routes = [
 	{path: '', component: LandingComponent},
 	{path: 'login', component: LoginComponent},
@@ -19,10 +22,9 @@ const appRoute: Routes = [
 	{path: 'reset-password', component: ResetpasswordComponent},
 	{path: 'dashboard', component: MainlayoutComponent, children: 
 		[
-			{path: 'projects', component: ScrumboardComponent}
+			{path: 'projects', component: ScrumboardComponent, resolve: {data: ScrumboardserviceService}}
 		]
 	}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoute);
-
