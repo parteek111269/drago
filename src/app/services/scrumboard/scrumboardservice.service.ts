@@ -14,11 +14,12 @@ export class ScrumboardserviceService implements Resolve<any> {
   	constructor(private http: HttpClient) {
   		// Set the defaults
         this.onBoardsChanged = new BehaviorSubject([]);
+        this.getBoards();
   	}
   	// resolver
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
     	this.routeParams = route.params;
-    	console.log(this.routeParams);
+    	console.log('this.routeParams');
     	return new Promise((resolve, reject) => {
             Promise.all([
                 this.getBoards()
@@ -34,9 +35,9 @@ export class ScrumboardserviceService implements Resolve<any> {
     getBoards(): Promise<any> {
     	return new Promise((resolve, reject) => {
     		this.http.get('api/scrumboard').subscribe((res: any) => {
-    			console.log(res);
+    			// console.log(res);
     			this.boards = res;
-    			// this.onBoardsChanged.next('asaa');
+    			this.onBoardsChanged.next(this.boards);
     			resolve(this.boards);
     		}, reject =>{
     			console.log('reject')

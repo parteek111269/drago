@@ -22,7 +22,6 @@ export class ScrumboardComponent implements OnInit {
 
   	ngOnInit(): void {
   		this.getBoards();
-  		this.scrumboardService.getBoards();
   	}
   	ngOnDestroy(): void {
   		// Unsubscribe from all subscriptions
@@ -33,7 +32,7 @@ export class ScrumboardComponent implements OnInit {
   		this.scrumboardService.onBoardsChanged
   		.pipe(takeUntil(this._unsubscribeAll))
   		.subscribe((data: any) => {
-  			console.log(data)
+  			this.boards = data;
   		})
   	}
 }

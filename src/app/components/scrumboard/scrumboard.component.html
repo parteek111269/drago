@@ -9,9 +9,11 @@
     <div class="board-list" fxFlex="0 0 auto" fxLayout="row wrap" fxLayoutAlign="center center" [@animateStagger]="{value:'50'}">
 
         <!-- BOARD -->
-        <!-- *ngFor="let board of boards" -->
-        <div class="board-list-item" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
-        	<div class="board-name">ACME Frontend Application</div></div>
+        <div *ngFor="let board of boards" class="board-list-item" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
+        	<div class="board-name">
+                {{board.name}}        
+            </div>
+        </div>
         <!-- / BOARD -->
 
         <!-- NEW BOARD BUTTON -->
