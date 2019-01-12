@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //  animation
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,7 +27,9 @@ import { MainlayoutComponent } from './components/mainlayout/mainlayout.componen
 import { HeaderComponent } from './components/header/header.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
-
+// fakedb
+import { FakeDbService } from './fake_db/fakedb.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -46,9 +49,14 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     routing,
     FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
+    InMemoryWebApiModule.forRoot(FakeDbService, {
+      delay             : 0,
+      passThruUnknownUrl: true
+    }),
     FlexLayoutModule,
     MatStepperModule, MatProgressBarModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
