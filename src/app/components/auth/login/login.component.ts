@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { fuseAnimations } from '../../../animation/animations';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth/auth.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 	public loginForm: FormGroup;
     public passwordType: string = 'password';
-  	constructor(private fb: FormBuilder, private router: Router){
+  	constructor(private fb: FormBuilder, private router: Router, private auth: AuthService){
         if(localStorage.isloggedIn){
             this.router.navigate(['/dashboard']);
         }
@@ -26,6 +28,7 @@ export class LoginComponent implements OnInit {
     }
     public login(loginData: any) {
         if(loginData.status === 'VALID'){
+            this.auth.signin(loginData.value);
             var isloggedIn: any = true;
             localStorage.setItem('isloggedIn', isloggedIn)
             this.router.navigate(['/dashboard']);
