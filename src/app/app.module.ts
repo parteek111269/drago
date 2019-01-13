@@ -11,6 +11,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 // routing
 import { routing } from './app-routing.module';
+// guards
+import { AuthGuardService } from './guards/auth-guard.service';
 // flex layout
 import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
@@ -61,7 +63,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     MatStepperModule, MatProgressBarModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

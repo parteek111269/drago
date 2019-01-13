@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ModuleWithProviders } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
 // components
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/auth/login/login.component';
@@ -15,14 +15,14 @@ import { ScrumboardComponent } from './components/scrumboard/scrumboard.componen
 import { ScrumboardserviceService } from './services/scrumboard/scrumboardservice.service';
 
 const appRoute: Routes = [
-	{path: '', component: LandingComponent},
-	{path: 'login', component: LoginComponent},
-	{path: 'register', component: RegisterComponent},
-	{path: 'forget-password', component: ForgotpasswordComponent},
-	{path: 'reset-password', component: ResetpasswordComponent},
-	{path: 'dashboard', component: MainlayoutComponent, children: 
+	{ path: '', component: LandingComponent },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'register', component: RegisterComponent },
+	{ path: 'forget-password', component: ForgotpasswordComponent },
+	{ path: 'reset-password', component: ResetpasswordComponent },
+	{ path: 'dashboard', component: MainlayoutComponent, canActivate: [AuthGuard], children: 
 		[
-			{path: 'projects', component: ScrumboardComponent, resolve: {data: ScrumboardserviceService}}
+			{ path: 'projects', component: ScrumboardComponent, resolve: { data: ScrumboardserviceService }, canActivate: [AuthGuard] }
 		]
 	}
 ];
