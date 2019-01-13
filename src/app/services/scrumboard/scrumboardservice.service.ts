@@ -14,7 +14,6 @@ export class ScrumboardserviceService implements Resolve<any> {
 	public onBoardsChanged: BehaviorSubject<any>;
 	constructor(public http: HttpClient) {
 		// Set the defaults
-		console.log(environment)
 		this.onBoardsChanged = new BehaviorSubject([]);
 	}
 	// resolver
@@ -34,7 +33,8 @@ export class ScrumboardserviceService implements Resolve<any> {
 	// get boards
 	getBoards(): Promise<any> {
 		return new Promise((resolve, reject) => {
-			this.http.get('api/scrumboard').subscribe((res: any) => {
+			let url = environment.baseUrl + environment.apiRoute.scrumboard;
+			this.http.get(url).subscribe((res: any) => {
 				this.boards = res;
 				this.onBoardsChanged.next(this.boards);
 				resolve(this.boards);

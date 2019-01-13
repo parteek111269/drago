@@ -5,5 +5,8 @@
 // use flag --configuration=production instaed of --env=prod
 export const environment = {
   production: false,
-  baseUrl: 'api/'
+  baseUrl: 'api/',
+  apiRoute: {
+    scrumboard: 'scrumboard'
+  }
 };
