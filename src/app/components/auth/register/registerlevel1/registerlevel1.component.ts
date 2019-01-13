@@ -10,11 +10,11 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class Registerlevel1Component implements OnInit {
 	@Output() emiterForTimer = new EventEmitter();
-	private registerForm: FormGroup;
-	private confirmationForm: FormGroup;
-	private unsubscribeAll: Subject<any>;
-	private passwordType: string = 'password';
-	private confirmPasswordType: string = 'password';
+	public registerForm: FormGroup;
+	public confirmationForm: FormGroup;
+	public unsubscribeAll: Subject<any>;
+	public passwordType: string = 'password';
+	public confirmPasswordType: string = 'password';
 	
 	constructor(private fb: FormBuilder){
 		this.unsubscribeAll = new Subject();
@@ -38,7 +38,7 @@ export class Registerlevel1Component implements OnInit {
         this.unsubscribeAll.next();
         this.unsubscribeAll.complete();
 	}
-	private passwordVisibility(flag: string) {
+	public passwordVisibility(flag: string) {
 		switch(flag){
 			case 'password':
 				this.passwordType === 'password' ? this.passwordType = 'text' : this.passwordType = 'password';
@@ -48,7 +48,7 @@ export class Registerlevel1Component implements OnInit {
 			break;	
 		}
     }
-	private getOtp(): void{
+	public getOtp(): void{
 		// after some api call we will move to otp page with timer
 		this.emiterForTimer.emit('start timer');
 	}

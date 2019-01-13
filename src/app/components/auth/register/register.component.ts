@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   animations: fuseAnimations
 })
 export class RegisterComponent implements OnInit, OnDestroy {
-	private startTimer: string = 'wait';
+	public startTimer: string = 'wait';
 	constructor(private router: Router){
 		if(localStorage.isloggedIn){
             this.router.navigate(['/dashboard']);

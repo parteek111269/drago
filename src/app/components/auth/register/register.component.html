@@ -17,11 +17,11 @@
                 <img src="assets/logos/drago.svg">
             </div>
             <mat-horizontal-stepper labelPosition="bottom" #stepper>
-                <mat-step [stepControl]="registerForm">
+                <mat-step [stepControl]="">
                     <div class="auth_form_title">Register</div>
         			<app-registerlevel1 (emiterForTimer)='emiterForTimer($event)'></app-registerlevel1>
                 </mat-step>
-                <mat-step [stepControl]="confirmationForm">
+                <mat-step [stepControl]="">
                     <div class="auth_form_title">Verify OTP</div>
                     <app-registerlevel2 [startTimer]="startTimer"></app-registerlevel2>
                 </mat-step>

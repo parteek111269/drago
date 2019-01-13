@@ -8,7 +8,7 @@ import { ProgressBarService } from '../../services/progressbar/progressbar.servi
   	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-	private isLoggedIn: boolean = false;
+	public isLoggedIn: boolean = false;
 	constructor(private router: Router, private pb: ProgressBarService) {
 		if(localStorage.isloggedIn){
 			this.isLoggedIn = true;

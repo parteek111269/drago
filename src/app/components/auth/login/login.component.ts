@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   animations: fuseAnimations
 })
 export class LoginComponent implements OnInit {
-	private loginForm: FormGroup;
-    private passwordType: string = 'password';
+	public loginForm: FormGroup;
+    public passwordType: string = 'password';
   	constructor(private fb: FormBuilder, private router: Router){
         if(localStorage.isloggedIn){
             this.router.navigate(['/dashboard']);
@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
         });
   	}
 	ngOnInit(): void{}
-    private passwordVisibility() {
+    public passwordVisibility() {
         this.passwordType === 'password' ? this.passwordType = 'text' : this.passwordType = 'password';
     }
-    private login(loginData: any) {
+    public login(loginData: any) {
         if(loginData.status === 'VALID'){
             var isloggedIn: any = true;
             localStorage.setItem('isloggedIn', isloggedIn)

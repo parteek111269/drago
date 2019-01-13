@@ -7,13 +7,13 @@ import { filter } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class ProgressBarService {
-    // Private
-    private _bufferValue: BehaviorSubject<number>;
-    private _mode: BehaviorSubject<string>;
-    private _value: BehaviorSubject<number>;
-    private _visible: BehaviorSubject<boolean>;
+    // public
+    public _bufferValue: BehaviorSubject<number>;
+    public _mode: BehaviorSubject<string>;
+    public _value: BehaviorSubject<number>;
+    public _visible: BehaviorSubject<boolean>;
 
-    constructor(private _router: Router) {
+    constructor(public _router: Router) {
         // Initialize the service
         this._init();
     }
@@ -50,7 +50,7 @@ export class ProgressBarService {
         return this._visible.asObservable();
     }
 
-    private _init(): void {
+    public _init(): void {
         // Initialize the behavior subjects
         this._bufferValue = new BehaviorSubject(0);
         this._mode = new BehaviorSubject('indeterminate');

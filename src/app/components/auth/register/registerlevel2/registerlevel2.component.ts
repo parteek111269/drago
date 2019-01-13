@@ -9,9 +9,9 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
 })
 export class Registerlevel2Component implements OnInit, OnDestroy {
     @Input() startTimer: number;
-    private isResendotpEnable: boolean = false;
-    private timeleft: number;
-	private confirmationForm: FormGroup;
+    public isResendotpEnable: boolean = false;
+    public timeleft: number;
+	public confirmationForm: FormGroup;
   	constructor(private fb: FormBuilder) {
   		// confirmation form
         this.confirmationForm = this.fb.group({
@@ -33,7 +33,7 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
             }
         }
     }
-    private otpTimer(): void {
+    public otpTimer(): void {
         this.isResendotpEnable = false;
         this.timeleft = 60;
         var downloadTimer = setInterval(() => { 
@@ -44,7 +44,7 @@ export class Registerlevel2Component implements OnInit, OnDestroy {
             }
         }, 1000);
     }
-	private next(e: any, prevEl: any, nextEl): void {
+	public next(e: any, prevEl: any, nextEl): void {
 		if(e.keyCode === 8){
 			prevEl.focus();
 		}else{

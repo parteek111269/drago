@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fuseAnimations } from '../../../animation/animations';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-resetpassword',
@@ -8,10 +9,13 @@ import { fuseAnimations } from '../../../animation/animations';
   animations: fuseAnimations
 })
 export class ResetpasswordComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+	public resetPasswordForm: FormGroup
+	constructor(private fb: FormBuilder) {
+		this.resetPasswordForm = this.fb.group({
+			email: ['', [Validators.required, Validators.email]],
+			password: [''],
+			passwordConfirm: ['']
+        });
+	}
+	ngOnInit(): void {}
 }

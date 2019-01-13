@@ -4,7 +4,7 @@ declare var $: any;
 	selector: '[appNumberonly]'
 })
 export class NumberonlyDirective {
-	constructor(private el: ElementRef){}
+	constructor(public el: ElementRef){}
 	@Input() appNumberonly: boolean;
 	@HostListener('keydown', ['$event']) onKeyDown(event) {
 		let e = <KeyboardEvent> event;
