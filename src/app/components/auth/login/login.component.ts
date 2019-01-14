@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 	public loginForm: FormGroup;
     public passwordType: string = 'password';
   	constructor(private fb: FormBuilder, private router: Router, private auth: AuthService){
-        if(localStorage.isloggedIn){
+        if(this.auth.isLoggedIn()){
             this.router.navigate(['/dashboard']);
         }
   		this.loginForm = this.fb.group({
@@ -28,10 +28,14 @@ export class LoginComponent implements OnInit {
     }
     public login(loginData: any) {
         if(loginData.status === 'VALID'){
-            this.auth.signin(loginData.value);
-            var isloggedIn: any = true;
-            localStorage.setItem('isloggedIn', isloggedIn)
-            this.router.navigate(['/dashboard']);
+            var subscription = this.auth.signin(loginData.value);
+            if(subscription) {
+                this.router.navigate(['/dashboard']);
+            }
+            // use below code for real world app
+            // this.auth.signin(loginData.value).subscribe((res: any) => {
+            //     console.log(res)
+            // });
         }
     }
 }

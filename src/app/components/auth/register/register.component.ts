@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { fuseAnimations } from '../../../animation/animations';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -10,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 	public startTimer: string = 'wait';
-	constructor(private router: Router){
-		if(localStorage.isloggedIn){
+	constructor(private router: Router, private auth: AuthService){
+		if(this.auth.isLoggedIn()){
             this.router.navigate(['/dashboard']);
         }
 	}
