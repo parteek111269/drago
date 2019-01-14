@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProgressBarService } from '../../services/progressbar/progressbar.service'
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   	selector: 'app-header',
@@ -8,21 +9,6 @@ import { ProgressBarService } from '../../services/progressbar/progressbar.servi
   	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-	public isLoggedIn: boolean = false;
-	constructor(private router: Router, private pb: ProgressBarService) {
-		if(localStorage.isloggedIn){
-			this.isLoggedIn = true;
-		}
-	}
-	ngOnInit(): void {
-		
-	}
-	logout(): void {
-		this.pb.show();
-		setTimeout(()=>{
-			localStorage.clear();
-			this.router.navigate(['']);
-			this.pb.hide();
-		}, 1000);
-	}
+	constructor(public auth: AuthService, private router: Router, private pb: ProgressBarService) {}
+	ngOnInit(): void {}
 }

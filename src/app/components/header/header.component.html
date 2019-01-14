@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- for non logged in user -->
-        <div *ngIf="!isLoggedIn" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div *ngIf="!auth.isLoggedIn()" class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">Home</a>
@@ -32,7 +32,7 @@
             </ul>
         </div>
         <!-- for logged in user -->
-        <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div *ngIf="auth.isLoggedIn()" class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['projects']">Projects</a>
@@ -47,7 +47,7 @@
                         <img class="user-avatar rounded-circle" src="assets/logos/logo.png" alt="User Avatar">
                     </div>
                     <div class="user-menu dropdown-menu">
-                        <a class="nav-link" (click)="logout()">Logout</a>
+                        <a class="nav-link" (click)="auth.logout()">Logout</a>
                     </div>
                 </li>
             </ul>
