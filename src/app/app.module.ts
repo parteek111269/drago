@@ -19,7 +19,7 @@ import { AuthGuardService } from './guards/auth-guard.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
-import { LandingComponent } from './components/landing/landing.component';
+// import { LandingComponent } from './components/landing/landing.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
@@ -35,7 +35,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent,
+    // LandingComponent,
     RegisterComponent,
     NumberonlyDirective,
     Registerlevel1Component,
