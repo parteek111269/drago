@@ -19,7 +19,7 @@ const appRoute: Routes = [
 	{ path: 'login', loadChildren: './components/auth/login/login.module#LoginModule' },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'forget-password', loadChildren: './components/auth/forgotpassword/forgotpassword.module#ForgotPasswordModule' },
-	{ path: 'reset-password', component: ResetpasswordComponent },
+	{ path: 'reset-password', loadChildren: './components/auth/resetpassword/resetpassword.module#ResetPasswordModule' },
 	{ path: 'dashboard', component: MainlayoutComponent, canActivate: [AuthGuard], children: 
 		[
 			{ path: 'projects', component: ScrumboardComponent, resolve: { data: ScrumboardserviceService }, canActivate: [AuthGuard] }

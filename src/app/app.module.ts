@@ -23,7 +23,7 @@ import { LandingComponent } from './components/landing/landing.component';
 // import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 // import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
-import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
+// import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
@@ -42,7 +42,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     // LoginComponent,
     RegisterComponent,
     // ForgotpasswordComponent,
-    ResetpasswordComponent,
+    // ResetpasswordComponent,
     NumberonlyDirective,
     Registerlevel1Component,
     Registerlevel2Component,
