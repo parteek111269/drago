@@ -4,9 +4,9 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
 // components
 import { LandingComponent } from './components/landing/landing.component';
-import { LoginComponent } from './components/auth/login/login.component';
+// import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
+// import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
@@ -16,9 +16,9 @@ import { ScrumboardserviceService } from './services/scrumboard/scrumboardservic
 
 const appRoute: Routes = [
 	{ path: '', component: LandingComponent },
-	{ path: 'login', loadChildren: '../app/components/auth/auth.module#AuthModule' },
+	{ path: 'login', loadChildren: './components/auth/login/login.module#LoginModule' },
 	{ path: 'register', component: RegisterComponent },
-	{ path: 'forget-password', component: ForgotpasswordComponent },
+	{ path: 'forget-password', loadChildren: './components/auth/forgotpassword/forgotpassword.module#ForgotPasswordModule' },
 	{ path: 'reset-password', component: ResetpasswordComponent },
 	{ path: 'dashboard', component: MainlayoutComponent, canActivate: [AuthGuard], children: 
 		[
