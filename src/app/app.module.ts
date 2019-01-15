@@ -25,9 +25,9 @@ import { NumberonlyDirective } from './directives/numberonly/numberonly.directiv
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
+
 // fakedb
 import { FakeDbService } from './fake_db/fakedb.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -41,7 +41,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     Registerlevel1Component,
     Registerlevel2Component,
     MainlayoutComponent,
-    HeaderComponent,
     ScrumboardComponent,
     ProgressbarComponent
   ],
@@ -51,13 +50,14 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     routing,
     FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatStepperModule, MatProgressBarModule,
+    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule,
+    // fake db
     InMemoryWebApiModule.forRoot(FakeDbService, {
       delay             : 0,
       passThruUnknownUrl: true
     }),
-    FlexLayoutModule,
-    MatStepperModule, MatProgressBarModule,
-    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

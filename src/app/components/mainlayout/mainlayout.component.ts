@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-mainlayout',
@@ -7,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainlayoutComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	constructor(public auth: AuthService) { }
+	ngOnInit(): void {}
 
 }
