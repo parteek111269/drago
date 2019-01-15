@@ -20,7 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
-import { LoginComponent } from './components/auth/login/login.component';
+// import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
@@ -39,7 +39,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
   declarations: [
     AppComponent,
     LandingComponent,
-    LoginComponent,
+    // LoginComponent,
     RegisterComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,

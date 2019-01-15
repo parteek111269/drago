@@ -16,7 +16,7 @@ import { ScrumboardserviceService } from './services/scrumboard/scrumboardservic
 
 const appRoute: Routes = [
 	{ path: '', component: LandingComponent },
-	{ path: 'login', component: LoginComponent },
+	{ path: 'login', loadChildren: '../app/components/auth/auth.module#AuthModule' },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'forget-password', component: ForgotpasswordComponent },
 	{ path: 'reset-password', component: ResetpasswordComponent },
