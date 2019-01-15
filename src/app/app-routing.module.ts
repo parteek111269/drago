@@ -4,10 +4,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
 // components
 import { LandingComponent } from './components/landing/landing.component';
-// import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-// import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
-import { ResetpasswordComponent } from './components/auth/resetpassword/resetpassword.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
