@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthHttp, AUTH_PROVIDERS, provideAuth, AuthConfig } from 'angular2-jwt/angular2-jwt';
 
 //  animation
@@ -13,8 +12,6 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { routing } from './app-routing.module';
 // guards
 import { AuthGuardService } from './guards/auth-guard.service';
-// flex layout
-import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
@@ -30,16 +27,13 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
     ProgressbarComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     HttpClientModule,
     routing,
-    FormsModule, ReactiveFormsModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
     MatProgressBarModule,
     // fake db
     InMemoryWebApiModule.forRoot(FakeDbService, {
-      delay             : 0,
+      delay: 0,
       passThruUnknownUrl: true
     }),
   ],
