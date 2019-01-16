@@ -4,7 +4,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
 // components
 // import { LandingComponent } from './components/landing/landing.component';
-import { RegisterComponent } from './components/auth/register/register.component';
+// import { RegisterComponent } from './components/auth/register/register.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
@@ -14,7 +14,7 @@ import { ScrumboardserviceService } from './services/scrumboard/scrumboardservic
 const appRoute: Routes = [
 	{ path: '', loadChildren: './components/landing/landing.module#LandingModule'},
 	{ path: 'login', loadChildren: './components/auth/login/login.module#LoginModule' },
-	{ path: 'register', component: RegisterComponent },
+	{ path: 'register', loadChildren: './components/auth/register/register.module#RegisterModule' },
 	{ path: 'forget-password', loadChildren: './components/auth/forgotpassword/forgotpassword.module#ForgotPasswordModule' },
 	{ path: 'reset-password', loadChildren: './components/auth/resetpassword/resetpassword.module#ResetPasswordModule' },
 	{ path: 'dashboard', component: MainlayoutComponent, canActivate: [AuthGuard], children: 

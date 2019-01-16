@@ -1,27 +1,25 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ResetpasswordComponent } from './resetpassword.component';
+import { Registerlevel1Component } from './registerlevel1.component';
 // angular md
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatStepperModule } from '@angular/material/stepper';
 // flex layout
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-const routes: Routes = [
-    { path: '', component: ResetpasswordComponent},
-];
 
 @NgModule({
+    declarations: [Registerlevel1Component],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes),
+        RouterModule,
         FormsModule, 
         ReactiveFormsModule,
-        MatButtonModule, MatFormFieldModule, MatInputModule,
+        MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatStepperModule,
         FlexLayoutModule
     ],
-    declarations: [ResetpasswordComponent],
-    exports: [RouterModule]
+    exports: [RouterModule, Registerlevel1Component]
 })
-export class ResetPasswordModule {}
+export class Registerlevel1Module {}
