@@ -19,11 +19,9 @@ import { AuthGuardService } from './guards/auth-guard.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
-// import { LandingComponent } from './components/landing/landing.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { Registerlevel1Component } from './components/auth/register/registerlevel1/registerlevel1.component';
-// import { Registerlevel1Module } from './components/auth/register/registerlevel1/registerlevel1.module';
 import { Registerlevel2Component } from './components/auth/register/registerlevel2/registerlevel2.component';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
@@ -36,7 +34,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 @NgModule({
   declarations: [
     AppComponent,
-    // LandingComponent,
     RegisterComponent,
     NumberonlyDirective,
     Registerlevel1Component,
@@ -59,7 +56,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
       delay             : 0,
       passThruUnknownUrl: true
     }),
-    // Registerlevel1Module
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
