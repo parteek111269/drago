@@ -2,11 +2,6 @@ import { NgModule } from '@angular/core';
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
-// components
-import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
-
-// services to resolve
-import { ScrumboardserviceService } from './services/scrumboard/scrumboardservice.service';
 
 const appRoute: Routes = [
 	{ path: '', loadChildren: './components/landing/landing.module#LandingModule'},

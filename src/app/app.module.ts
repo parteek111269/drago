@@ -17,7 +17,6 @@ import { AuthGuardService } from './guards/auth-guard.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
-import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 
 // fakedb
@@ -28,7 +27,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 @NgModule({
   declarations: [
     AppComponent,
-    ScrumboardComponent,
     ProgressbarComponent,
   ],
   imports: [
