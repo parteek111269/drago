@@ -3,9 +3,6 @@ import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
 // components
-// import { LandingComponent } from './components/landing/landing.component';
-// import { RegisterComponent } from './components/auth/register/register.component';
-import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 
 // services to resolve
@@ -17,11 +14,10 @@ const appRoute: Routes = [
 	{ path: 'register', loadChildren: './components/auth/register/register.module#RegisterModule' },
 	{ path: 'forget-password', loadChildren: './components/auth/forgotpassword/forgotpassword.module#ForgotPasswordModule' },
 	{ path: 'reset-password', loadChildren: './components/auth/resetpassword/resetpassword.module#ResetPasswordModule' },
-	{ path: 'dashboard', component: MainlayoutComponent, canActivate: [AuthGuard], children: 
-		[
-			{ path: 'projects', component: ScrumboardComponent, resolve: { data: ScrumboardserviceService }, canActivate: [AuthGuard] }
-		]
-	}
+	{ path: 'dashboard', loadChildren: './components/mainlayout/mainlayout.module#MainlayoutModule', canActivate: [AuthGuard] }
+	// [
+	// 	{ path: 'projects', component: ScrumboardComponent, resolve: { data: ScrumboardserviceService }, canActivate: [AuthGuard] }
+	// ]
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoute);
