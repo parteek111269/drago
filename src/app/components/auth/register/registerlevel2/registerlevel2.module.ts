@@ -8,10 +8,13 @@ import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule 
 import { MatStepperModule } from '@angular/material/stepper';
 // flex layout
 import { FlexLayoutModule } from '@angular/flex-layout';
+// directives
+import { NumberonlyDirective } from '../../../../directives/numberonly/numberonly.directive';
+
 
 
 @NgModule({
-    declarations: [Registerlevel2Component],
+    declarations: [Registerlevel2Component, NumberonlyDirective],
     imports: [
         CommonModule,
         RouterModule,

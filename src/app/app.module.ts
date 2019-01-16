@@ -19,7 +19,6 @@ import { AuthGuardService } from './guards/auth-guard.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 //  Components
 import { AppComponent } from './app.component';
-import { NumberonlyDirective } from './directives/numberonly/numberonly.directive';
 import { MainlayoutComponent } from './components/mainlayout/mainlayout.component';
 import { ScrumboardComponent } from './components/scrumboard/scrumboard.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
@@ -31,7 +30,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 @NgModule({
   declarations: [
     AppComponent,
-    NumberonlyDirective,
     MainlayoutComponent,
     ScrumboardComponent,
     ProgressbarComponent
