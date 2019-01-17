@@ -18,6 +18,7 @@ import { ProgressbarComponent } from './components/progressbar/progressbar.compo
 // fakedb
 import { FakeDbService } from './fake_db/fakedb.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { BoardComponent } from './components/board/board.component';
 
 
 
@@ -25,6 +26,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
   declarations: [
     AppComponent,
     ProgressbarComponent,
+    // BoardComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,

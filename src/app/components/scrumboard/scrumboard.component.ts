@@ -27,7 +27,7 @@ export class ScrumboardComponent implements OnInit, OnDestroy {
 		// Unsubscribe from all subscriptions
 		this._unsubscribeAll.next();
 		this._unsubscribeAll.complete();
-	}
+	}z
 	getBoards() {
 		this.scrumboardService.onBoardsChanged
 		.pipe(takeUntil(this._unsubscribeAll))
