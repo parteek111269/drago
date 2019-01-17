@@ -2,7 +2,6 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './guards/auth-guard.service';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 const appRoute: Routes = [
 	{ path: '', loadChildren: './components/landing/landing.module#LandingModule'},
@@ -12,7 +11,7 @@ const appRoute: Routes = [
 	{ path: 'reset-password', loadChildren: './components/auth/resetpassword/resetpassword.module#ResetPasswordModule' },
 	{ path: 'dashboard', loadChildren: './components/mainlayout/mainlayout.module#MainlayoutModule', canActivate: [AuthGuard] },
 	// if page not found
-	{path: '404', component: PagenotfoundComponent},
+	{path: '404', loadChildren: './components/pagenotfound/pagenotfound.module#PagenotfoundModule'},
 	{path: '**', redirectTo: '/404'}
 ];
 
