@@ -13,7 +13,7 @@ import { ScrumboardserviceService } from '../../services/scrumboard/scrumboardse
 import { FlexLayoutModule } from '@angular/flex-layout';
 const routes: Routes = [
     { path: '', component: ScrumboardComponent, resolve: { data: ScrumboardserviceService }, canActivate: [AuthGuard] },
-    { path: 'board', loadChildren: '../board/board.module#BoardModule', canActivate: [AuthGuard] }
+    { path: ':boardId' + '/' + ':boardUri', loadChildren: '../board/board.module#BoardModule', canActivate: [AuthGuard] }
 ];
 
 @NgModule({

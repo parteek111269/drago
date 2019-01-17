@@ -9,7 +9,7 @@
     <div class="board-list" fxFlex="0 0 auto" fxLayout="row wrap" fxLayoutAlign="center center" [@animateStagger]="{value:'50'}">
 
         <!-- BOARD -->
-        <div [routerLink]="['board']" *ngFor="let board of boards" class="board-list-item" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
+        <div [routerLink]="[board.id + '/' + board.uri]" *ngFor="let board of boards" class="board-list-item" fxLayout="column" fxLayoutAlign="center center" [@animate]="{value:'*',params:{y:'100%'}}">
         	<div class="board-name">
                 {{board.name}}        
             </div>
