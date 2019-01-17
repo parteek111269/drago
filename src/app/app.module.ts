@@ -15,16 +15,18 @@ import { AuthGuardService } from './guards/auth-guard.service';
 //  Components
 import { AppComponent } from './app.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
-
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 // fakedb
 import { FakeDbService } from './fake_db/fakedb.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgressbarComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
